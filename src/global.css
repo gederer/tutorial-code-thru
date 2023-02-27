@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+b {
+  font-weight: unset;
+  display: block;
+}
+s {
+  text-decoration: unset;
+}
+
+@layer base {
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="datetime-local"]:focus,
+  [type="month"]:focus,
+  [type="search"]:focus,
+  [type="tel"]:focus,
+  [type="time"]:focus,
+  [type="week"]:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus {
+    --tw-ring-color: #7e23ce;
+    border-color: var(--tw-ring-color);
+    @apply transition;
+  }
+
+  a,
+  [type="checkbox"],
+  [type="radio"] {
+    color: #7e23ce;
+    @apply transition;
+  }
+
+  [type="checkbox"]:focus,
+  [type="radio"]:focus {
+    --tw-ring-color: #7e23ce;
+    @apply transition;
+  }
+
+  button:focus,
+  a:focus {
+    box-shadow: 0 0 0 1px #7e23ce;
+    border-color: #7e23ce;
+    outline: none;
+    @apply transition;
+  }
+}
